@@ -1,6 +1,6 @@
 {
-  "name": "x-data-spreadsheet",
-  "version": "1.1.8",
+  "name": "z-spreadsheet",
+  "version": "1.1.10",
   "description": "a javascript xpreadsheet",
   "types": "src/index.d.ts",
   "main": "src/index.js",
@@ -9,11 +9,11 @@
     "dist",
     "src"
   ],
-  "author": "myliang <liangyuliang0335@gmail.com>",
+  "author": "zhoudaxiaa <zhoudaxiaa@gmail.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/myliang/x-spreadsheet.git"
+    "url": "https://github.com/zhoudaxiaa/x-spreadsheet.git"
   },
   "nyc": {
     "all": true,
@@ -67,9 +67,5 @@
   "dependencies": {
     "opencollective": "^1.0.3",
     "opencollective-postinstall": "^2.0.2"
-  },
-  "collective": {
-    "type": "opencollective",
-    "url": "https://opencollective.com/x-spreadsheet"
   }
 }
