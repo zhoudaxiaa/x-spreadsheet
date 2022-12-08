@@ -222,14 +222,14 @@ function overlayerMousescroll(evt) {
       const ci = data.scroll.ci + 1;
       if (ci < cols.len) {
         const cw = loopValue(ci, i => cols.getWidth(i));
-        horizontalScrollbar.move({ left: left + cw * 0.4 - 1 });
+        horizontalScrollbar.move({ left: left + cw * 0.1 - 1 });
       }
     } else {
       // right
       const ci = data.scroll.ci - 1;
       if (ci >= 0) {
         const cw = loopValue(ci, i => cols.getWidth(i));
-        horizontalScrollbar.move({ left: ci === 0 ? 0 : left - cw * 0.4 });
+        horizontalScrollbar.move({ left: ci === 0 ? 0 : left - cw * 0.1 });
       }
     }
   };
