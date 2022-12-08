@@ -203,14 +203,14 @@ function overlayerMousescroll(evt) {
       const ri = data.scroll.ri + 1;
       if (ri < rows.len) {
         const rh = loopValue(ri, i => rows.getHeight(i));
-        verticalScrollbar.move({ top: top + rh - 1 });
+        verticalScrollbar.move({ top: top + rh * 0.4 - 1 });
       }
     } else {
       // down
       const ri = data.scroll.ri - 1;
       if (ri >= 0) {
         const rh = loopValue(ri, i => rows.getHeight(i));
-        verticalScrollbar.move({ top: ri === 0 ? 0 : top - rh });
+        verticalScrollbar.move({ top: ri === 0 ? 0 : top - rh * 0.4 });
       }
     }
   };
@@ -222,14 +222,14 @@ function overlayerMousescroll(evt) {
       const ci = data.scroll.ci + 1;
       if (ci < cols.len) {
         const cw = loopValue(ci, i => cols.getWidth(i));
-        horizontalScrollbar.move({ left: left + cw - 1 });
+        horizontalScrollbar.move({ left: left + cw * 0.4 - 1 });
       }
     } else {
       // right
       const ci = data.scroll.ci - 1;
       if (ci >= 0) {
         const cw = loopValue(ci, i => cols.getWidth(i));
-        horizontalScrollbar.move({ left: ci === 0 ? 0 : left - cw });
+        horizontalScrollbar.move({ left: ci === 0 ? 0 : left - cw * 0.4 });
       }
     }
   };
