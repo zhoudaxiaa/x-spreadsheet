@@ -1234,7 +1234,7 @@ export default class DataProxy {
       freeze: xy2expr(freeze[1], freeze[0]),
       styles,
       merges: merges.getData(),
-      rows: rows.getData(),
+      rows: rows.getData(this),
       cols: cols.getData(),
       validations: validations.getData(),
       autofilter: autoFilter.getData(),

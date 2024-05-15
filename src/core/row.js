@@ -1,4 +1,6 @@
 import helper from './helper';
+import _cell from '../core/cell';
+import { formulam } from '../core/formula';
 import { expr2expr } from './alphabet';
 
 class Rows {
@@ -344,8 +346,16 @@ class Rows {
     this._ = d;
   }
 
-  getData() {
+  getData(data) {
     const { len } = this;
+    const rows = this._
+    Object.keys(rows).forEach(ri => {
+      const row = rows[ri];
+      Object.keys(row.cells).forEach(ci => {
+        const cell = row.cells[ci];
+        cell.renderText = _cell.render(cell.text || '', formulam, (y, x) => (data.getCellTextOrDefault(x, y)));
+      })
+    })
     return Object.assign({ len }, this._);
   }
 }
