@@ -351,6 +351,7 @@ class Rows {
     const rows = this._
     Object.keys(rows).forEach(ri => {
       const row = rows[ri];
+      if (!row.cells) return
       Object.keys(row.cells).forEach(ci => {
         const cell = row.cells[ci];
         cell.renderText = _cell.render(cell.text || '', formulam, (y, x) => (data.getCellTextOrDefault(x, y)));
